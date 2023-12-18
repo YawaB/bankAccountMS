@@ -22,8 +22,13 @@ exposant également une API RESTful via Spring Data Rest, et intégrant une couc
 <h1>Exposition de l'API Restful en utilisant Spring Data Rest en exploitant des projections</h1>
 <p>Après l'ajout de la dependance Spring-data-Rest, il faut annoter l'interface Repository avec @RepositoryRestResource.<br>Nous rechargons l'API Rest</p>
 <img src="./captures/springDataRest.png" alt="Visualisation des données avec spring data Rest">
-<p>Le Spring data rest utilise maintenant le path /accounts</p>
+<p>Le Spring data rest utilise maintenant le path <b>/accounts</b></p>
 <img src="./captures/projection.png" alt="Visualisation projétée des données avec spring data Rest à travers une nouvelle fonction findByCurrency">
-<p>Le Spring data rest utilise maintenant le path /accounts</p>
+<p>Test de la methode findByCurrency ajoutée dans l'interface de Spring Data Rest</p>
+<h3>Les projections avec Spring Data Rest</h3>
+<img src="./captures/projectionP1.png" alt="Visualisation projétée des données avec spring data Rest à travers une nouvelle fonction findByCurrency">
+<h2>Utilisation des Mappers</h2>
+<img src="./captures/postMapper.png" alt="Utilisation des Mappers:AccountMapper pour convertir les request en responses">
+
 
 

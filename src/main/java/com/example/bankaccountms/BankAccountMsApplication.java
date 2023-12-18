@@ -16,22 +16,23 @@ public class BankAccountMsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BankAccountMsApplication.class, args);
+
     }
     @Bean
-    CommandLineRunner start(IAccountRepository accountRepository){
+    public CommandLineRunner start(IAccountRepository bankAccountRepository) {
         return args -> {
-
-            for (int i = 1; i <10 ; i++) {
-                Account account = Account.builder()
-                        .id(UUID.randomUUID().toString())
-                        .type(Math.random()>0.5? AccountType.CURRENT_ACCOUNT :AccountType.SAVING_ACCOUNT)
-                        .balance(10000+Math.random()*90000)
-                        .created_at(new Date())
-                        .currency("MAD")
-                        .build();
-                accountRepository.save(account);
-            }
+                for (int i = 1; i < 10; i++) {
+                    Account bankAccount = Account.builder()
+                            .id(UUID.randomUUID().toString())
+                            .type(Math.random() > 0.5 ? AccountType.CURRENT_ACCOUNT : AccountType.SAVING_ACCOUNT)
+                            .balance(10000 + Math.random() * 90000)
+                            .created_at(new Date())
+                            .currency("MAD")
+                            .build();
+                    bankAccountRepository.save(bankAccount);
+                }
         };
-    }
+}
 
 }
+

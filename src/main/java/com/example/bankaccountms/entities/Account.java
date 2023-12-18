@@ -9,11 +9,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+
+@Entity @Data @Builder @AllArgsConstructor @NoArgsConstructor
 public class Account {
 
     @Id
@@ -23,7 +20,4 @@ public class Account {
     private String currency;
     @Enumerated(EnumType.STRING)
     private AccountType type;
-
-
-
 }
